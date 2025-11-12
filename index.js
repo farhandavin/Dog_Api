@@ -1,6 +1,6 @@
 import express from "express";
 import axios from "axios";
-import bodyParser from "body-parser";
+
 import 'dotenv/config';
 
 const app = express();
@@ -11,7 +11,7 @@ const dogApiUrl = process.env.DOG_API_URL;
 
 // Middleware untuk menyajikan file statis dari folder 'public'
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // Rute utama untuk menampilkan halaman
 app.get("/", async (req, res) => {
