@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
         const imageUrl = response.data.message; 
        
         // Render halaman EJS dan kirim URL gambar
-        res.render("index.ejs", {
+        res.render("./views/index.ejs", {
             dog: imageUrl
         });
 
